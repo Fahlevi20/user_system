@@ -3,7 +3,6 @@ package api
 import (
 	User "github.com/Fahlevi20/user_system/api/features/users"
 	"github.com/gin-gonic/gin"
-	"github.com/jackc/pgx/v5/pgxpool"
 )
 
 type Router interface {
@@ -32,11 +31,4 @@ func (r *router) SetupRouter(router *gin.Engine) {
 
 	// Rute untuk registrasi pengguna
 	api.POST("/register", userController.RegisterUserAPI)
-}
-
-func initializeDatabase() *pgxpool.Pool {
-	// Kode inisialisasi koneksi ke database PostgreSQL
-	// ...
-
-	return db
 }
