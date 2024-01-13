@@ -27,7 +27,7 @@ type RegisterUser struct{
 		First_name string
 		Last_name string
 		Password string
-		Email [] string
+		Email  string
 		// Phone string
 		// Token
 		// user_type
@@ -43,7 +43,7 @@ type RegisterUser struct{
 type UserLogin struct{
 	ID string 
 	Password string
-	Email [] string
+	Email  string
 	// Token
 	// user_type
 	// Refresh_token
