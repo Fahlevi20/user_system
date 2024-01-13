@@ -1,14 +1,17 @@
 package main
 
-import "fmt"
+import "github.com/gin-gonic/gin"
+
+var (
+	router Router = NewRouter()
+)
 
 func main() {
-
-	var number = 10
-	//pakai pointer
-	var pointer *int = &number
-	fmt.Println("Nilai pointer:", pointer)
-	*pointer = 200
-
-	fmt.Println("ini hasil variabel number", number)
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
+	r.Run()
 }
