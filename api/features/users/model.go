@@ -1,5 +1,5 @@
 //structure data
-package Model
+package User
 
 import{
 
