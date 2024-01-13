@@ -1,16 +1,12 @@
-//structure data
+// structure data
 package User
 
-import{
-
-}
-
-type User struct{
-	ID string 
+type User struct {
+	ID         string
 	First_name string
-	Last_name string
-	Password string
-	Email [] string
+	Last_name  string
+	Password   string
+	Email      []string
 	// Phone string
 	// Token
 	// user_type
@@ -21,29 +17,26 @@ type User struct{
 
 }
 
-type RegisterUser struct{
-	type User struct{
-		ID string 
-		First_name string
-		Last_name string
-		Password string
-		Email  string
-		// Phone string
-		// Token
-		// user_type
-		// Refresh_token
-		// Created_at
-		// Update_at
-		// User_id
-	
-	}
+type RegisterUser struct {
+	ID         string
+	First_name string
+	Last_name  string
+	Password   string
+	Email      string
+	// Phone string
+	// Token
+	// user_type
+	// Refresh_token
+	// Created_at
+	// Update_at
+	// User_id
 
 }
 
-type UserLogin struct{
-	ID string 
+type UserLogin struct {
+	ID       string
 	Password string
-	Email  string
+	Email    string
 	// Token
 	// user_type
 	// Refresh_token

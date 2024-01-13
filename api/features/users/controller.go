@@ -17,14 +17,15 @@ func NewUserController(userService UserService) *UserController {
 }
 
 // calling api
-func (c *RegisterUser) RegisterUser(ctx *gin.Context) {
+func (c *UserController) RegisterUserAPI(ctx *gin.Context) {
 	var userInput RegisterUser
 	if err := ctx.ShouldBindJSON(&userInput); err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
 
-	err := c.RegisterUser(&userInput)
+	err := c.userService.RegisterUser(&userInput)
+
 	if err != nil {
 		// Mengembalikan kesalahan jika registrasi gagal
 		ctx.JSON(http.StatusInternalServerError, gin.H{"error": "Gagal melakukan registrasi pengguna"})
